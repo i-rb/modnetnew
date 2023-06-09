@@ -651,69 +651,7 @@ else if (tvq==10) then
 !                dtfv = dtfv + x(k0, xcolv)
 !            endif !(g(k0,iv)==1)
 !        endif !(k0 .ne. jv)
-!   enddo !k0
-!!******************************
-!!* Differential Homophily 1/1 *
-!!******************************
-else if (tvq==21) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-
-!!******************************
-!!* Differential Homophily 1/2 *
-!!******************************
-else if (tvq==22) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-!!******************************
-!!* Differential Homophily 1/3 *
-!!******************************
-else if (tvq==23) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-
+!  
 !!******************************
 !!* Differential Homophily 1/4 *
 !!******************************
@@ -750,66 +688,10 @@ else if (tvq==23) then
 !
 !!******************************
 !!* Differential Homophily 2/1 *
-!!******************************
-else if (tvq==31) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
 
 !!******************************
 !!* Differential Homophily 2/2 *
 !!******************************
-else if (tvq==32) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-
-!!******************************
-!!* Differential Homophily 2/3 *
-!!******************************
-else if (tvq==33) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
 
 !!******************************
 !!* Differential Homophily 2/4 *
@@ -844,66 +726,6 @@ else if (tvq==33) then
 !            endif !(g(k0,iv)==1)
 !        endif !(k0 .ne. jv)
 !    enddo !k0
-!
-!!******************************
-!!* Differential Homophily 3/1 *
-!!******************************
-else if (tvq==41) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==1 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-
-!!******************************
-!!* Differential Homophily 3/2 *
-!!******************************
-else if (tvq==42) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==2 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
-
-!!******************************
-!!* Differential Homophily 3/3 *
-!!******************************
-else if (tvq==43) then          
-    do k0=1,nv
-        if (k0 .ne. iv) then
-            if (g(jv,k0)==1) then
-            	if (( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            endif !(g(jv,k0)==1)
-        endif !(k0 .ne. iv)
-       if (k0 .ne. jv) then
-            if (g(k0,iv)==1) then
-            	if (( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==3 )) then 
-            		dtfv = dtfv + 1.0
-            	endif
-            endif !(g(k0,iv)==1)
-        endif !(k0 .ne. jv)
-    enddo !k0
 
 !!******************************
 !!* Differential Homophily 3/4 *
@@ -1393,19 +1215,97 @@ else if (tvq==23) then
         endif !(k0 .ne. iv)
     enddo !k0
 
+
+
+
+
+
 !******************************
-!* Differential Homophily 1/4 *
+!* Differential Homophily 2/1 *
 !******************************
-else if (tvq==24) then          
+else if (tvq==31) then          
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                if ( x(iv, xcolvq)==1 .and. x(k0, xcolvq) ==4 ) then
+                if ( x(iv, xcolvq)==2 .and.  x(k0, xcolvq) ==1) then
 					dtfvq = dtfvq + 1.0
 				endif
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
     enddo !k0
+
+!******************************
+!* Differential Homophily 2/2 *
+!******************************
+else if (tvq==32) then          
+    do k0=1,nv
+        if (k0 .ne. iv) then
+            if (g(jv,k0)==1) then
+                if ( x(iv, xcolvq)==2 .and. x(k0, xcolvq) ==2 ) then
+					dtfvq = dtfvq + 1.0
+				endif
+            endif !(g(jv,k0)==1)
+        endif !(k0 .ne. iv)
+    enddo !k0
+
+!******************************
+!* Differential Homophily 2/3 *
+!******************************
+else if (tvq==33) then          
+    do k0=1,nv
+        if (k0 .ne. iv) then
+            if (g(jv,k0)==1) then
+                if ( x(iv, xcolvq)==2 .and. x(k0, xcolvq) ==3 ) then
+					dtfvq = dtfvq + 1.0
+				endif
+            endif !(g(jv,k0)==1)
+        endif !(k0 .ne. iv)
+    enddo !k0
+    
+    
+    !******************************
+!* Differential Homophily 3/1 *
+!******************************
+else if (tvq==41) then          
+    do k0=1,nv
+        if (k0 .ne. iv) then
+            if (g(jv,k0)==1) then
+                if ( x(iv, xcolvq)==3 .and.  x(k0, xcolvq) ==1) then
+					dtfvq = dtfvq + 1.0
+				endif
+            endif !(g(jv,k0)==1)
+        endif !(k0 .ne. iv)
+    enddo !k0
+
+!******************************
+!* Differential Homophily 3/2 *
+!******************************
+else if (tvq==42) then          
+    do k0=1,nv
+        if (k0 .ne. iv) then
+            if (g(jv,k0)==1) then
+                if ( x(iv, xcolvq)==3 .and. x(k0, xcolvq) ==2 ) then
+					dtfvq = dtfvq + 1.0
+				endif
+            endif !(g(jv,k0)==1)
+        endif !(k0 .ne. iv)
+    enddo !k0
+
+!******************************
+!* Differential Homophily 3/3 *
+!******************************
+else if (tvq==43) then          
+    do k0=1,nv
+        if (k0 .ne. iv) then
+            if (g(jv,k0)==1) then
+                if ( x(iv, xcolvq)==3 .and. x(k0, xcolvq) ==3 ) then
+					dtfvq = dtfvq + 1.0
+				endif
+            endif !(g(jv,k0)==1)
+        endif !(k0 .ne. iv)
+    enddo !k0
+
+
 
 !!******************************
 !!* Differential Homophily 1/5 *
