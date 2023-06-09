@@ -659,12 +659,14 @@ else if (tvq==21) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + (x(iv, xcolv)==1).and.(x(k0, xcolv)==1)
+            	if ( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + (x(k0, xcolv)==1).and.(x(jv, xcolv) ==1)
+            	if ( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -676,16 +678,17 @@ else if (tvq==22) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==2 )
+            	if ( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==1).and.(x(jv, xcolv) ==2 )
+            	if ( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
-
 !!******************************
 !!* Differential Homophily 1/3 *
 !!******************************
@@ -693,12 +696,14 @@ else if (tvq==23) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==1 ).and.(x(k0, xcolv) ==3)
+            	if ( x(iv, xcolv)==1 ).and.( x(k0, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==1).and.(x(jv, xcolv) ==3 )
+            	if ( x(k0, xcolv)==1 ).and.( x(jv, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -744,12 +749,14 @@ else if (tvq==31) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==1 )
+            	if ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==2).and.(x(jv, xcolv) ==1 )
+            	if ( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -761,12 +768,14 @@ else if (tvq==32) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==2 )
+            	if ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==2).and.(x(jv, xcolv) ==2 )
+            	if ( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -778,12 +787,14 @@ else if (tvq==33) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==3 )
+            	if ( x(iv, xcolv)==2 ).and.( x(k0, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==2).and.(x(jv, xcolv) ==3 )
+            	if ( x(k0, xcolv)==2 ).and.( x(jv, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -829,12 +840,14 @@ else if (tvq==41) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv= dtfv + ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==1 )
+            	if ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==3).and.(x(jv, xcolv) ==1 )
+            	if ( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==1 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -846,12 +859,14 @@ else if (tvq==42) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==2 )
+            	if ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==3).and.(x(jv, xcolv) ==2 )
+            	if ( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==2 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
@@ -863,12 +878,14 @@ else if (tvq==43) then
     do k0=1,nv
         if (k0 .ne. iv) then
             if (g(jv,k0)==1) then
-                dtfv = dtfv + ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==3 )
+            	if ( x(iv, xcolv)==3 ).and.( x(k0, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(jv,k0)==1)
         endif !(k0 .ne. iv)
        if (k0 .ne. jv) then
             if (g(k0,iv)==1) then
-                dtfv = dtfv + ( x(k0, xcolv)==3).and.(x(jv, xcolv) ==3 )
+            	if ( x(k0, xcolv)==3 ).and.( x(jv, xcolv) ==3 ) then 
+            		dtfv = dtfv + 1.0
             endif !(g(k0,iv)==1)
         endif !(k0 .ne. jv)
     enddo !k0
